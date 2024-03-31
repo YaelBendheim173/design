@@ -11,7 +11,7 @@ namespace SCS.FoldersAndFiles
         private States.State state;
         public FoldersAndFiles()
         {
-            state = new States.Druft();
+            state = new States.Druft(this);
         }
         public abstract void Open();
         public void ChangeState(States.State state)

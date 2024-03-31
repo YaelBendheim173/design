@@ -28,15 +28,18 @@ namespace SCS
         }
         public void Subscribe(ISubscriber subscriber)
         {
-
+            subscribers.Add(subscriber);
         }
         public void UnSubscribe(ISubscriber subscriber)
         {
-
+            subscribers.Remove(subscriber);
         }
-        public void NotifySubscribers()
+        public void NotifySubscribers(FoldersAndFiles.FoldersAndFiles f)
         {
-
+            foreach (var subscriber in subscribers)
+            {
+                subscriber.Update(f);
+            }
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UWc+GofziB3yvI7Oloql9g5H6sICnKGXEfAi2zSwKHO5bTIFSO1IRFPt7xQQPGSDr6ETU7nl+UUQe6BRVI67mw==",
+  "dgSpecHash": "sQ+dv6afXAacP/FZkMwPc8YIMXDJnsD7WT2q1jpzv+fiV5JelglFzelAm9ZHpJ7ZOoxhLxxqcnbUtxDZioUNyQ==",
   "success": true,
-  "projectFilePath": "H:\\DesignPatterns\\DesignProject\\SCS\\SCS\\SCS.csproj",
+  "projectFilePath": "H:\\DesignPatterns\\design\\DesignProject\\SCS\\SCS\\SCS.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

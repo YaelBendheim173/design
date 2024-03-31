@@ -13,9 +13,9 @@ namespace SCS.States
         {
             sourceFile = f;
         }
-        public abstract void Add();
-        public abstract void Commit();
-        public abstract void RequestReview();
-        public abstract void Merge();
+        public abstract string Add();
+        public abstract string Commit();
+        public abstract string RequestReview();
+        public abstract string Merge();
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\DesignPatterns\\DesignProject\\SCS\\SCS\\SCS.csproj": {}
+    "H:\\DesignPatterns\\design\\DesignProject\\SCS\\SCS\\SCS.csproj": {}
   },
   "projects": {
-    "H:\\DesignPatterns\\DesignProject\\SCS\\SCS\\SCS.csproj": {
+    "H:\\DesignPatterns\\design\\DesignProject\\SCS\\SCS\\SCS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\DesignPatterns\\DesignProject\\SCS\\SCS\\SCS.csproj",
+        "projectUniqueName": "H:\\DesignPatterns\\design\\DesignProject\\SCS\\SCS\\SCS.csproj",
         "projectName": "SCS",
-        "projectPath": "H:\\DesignPatterns\\DesignProject\\SCS\\SCS\\SCS.csproj",
+        "projectPath": "H:\\DesignPatterns\\design\\DesignProject\\SCS\\SCS\\SCS.csproj",
         "packagesPath": "C:\\Users\\בנדהיים יעל\\.nuget\\packages\\",
-        "outputPath": "H:\\DesignPatterns\\DesignProject\\SCS\\SCS\\obj\\",
+        "outputPath": "H:\\DesignPatterns\\design\\DesignProject\\SCS\\SCS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
