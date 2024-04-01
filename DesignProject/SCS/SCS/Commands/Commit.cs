@@ -13,9 +13,10 @@ namespace SCS.Commands
         {
             
         }
-        public override void Execute()
+        public override void Execute(FoldersAndFiles.FoldersAndFiles file)
         {
-            throw new NotImplementedException();
+            scs.Commit(file);
+            
         }
     }
 }

@@ -9,9 +9,9 @@ namespace SCS.FoldersAndFiles
     internal class Folder:FoldersAndFiles
     {
         private List<FoldersAndFiles> children = new();
-        public override void Open()
+        public override List<FoldersAndFiles> Open()
         {
-
+            return children;
         }
         public void Add(FoldersAndFiles f) 
         {

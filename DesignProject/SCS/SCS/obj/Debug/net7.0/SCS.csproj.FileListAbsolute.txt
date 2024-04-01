@@ -1,0 +1,5 @@
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.csproj.AssemblyReference.cache
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.GeneratedMSBuildEditorConfig.editorconfig
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.AssemblyInfoInputs.cache
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.AssemblyInfo.cs
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.csproj.CoreCompileInputs.cache

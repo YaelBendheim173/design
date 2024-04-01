@@ -8,15 +8,16 @@ namespace SCS.FoldersAndFiles
 {
     internal abstract class FoldersAndFiles
     {
-        private States.State state;
+        
+        public States.State State { get; set; }
         public FoldersAndFiles()
         {
-            state = new States.Druft(this);
+            State = new States.Druft(this);
         }
-        public abstract void Open();
+        public abstract List<FoldersAndFiles> Open();
         public void ChangeState(States.State state)
         {
-            this.state = state;
+            this.State = state;
         }
     }
 }

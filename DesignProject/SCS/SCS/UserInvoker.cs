@@ -1,4 +1,6 @@
-﻿using SCS.Review;
+﻿using SCS.Commands;
+using SCS.Review;
+using SCS.SCS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,11 +22,16 @@ namespace SCS
         }
         public void DoJob()
         {
-         
+            while (commandsQueue.Count > 0)
+            {
+                Command command = commandsQueue.Dequeue();
+                commandsList.Add(command);
+                Console.WriteLine(command);
+            }
         }
-        public void SCSCommandRequest()
+        public void SCSCommandRequest(Command command)
         {
-
+            commandsQueue.Enqueue(command);
         }
         public void Subscribe(ISubscriber subscriber)
         {
@@ -41,5 +48,13 @@ namespace SCS
                 subscriber.Update(f);
             }
         }
+        //public void CreateBranch(Branch branch)
+        //{
+        //    branch.Clone();
+        //}
+        //public void DeleteBranch(Branch branch)
+        //{
+            
+        //}
     }
 }

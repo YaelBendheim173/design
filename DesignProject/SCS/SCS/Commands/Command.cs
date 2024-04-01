@@ -14,6 +14,6 @@ namespace SCS.Commands
         {
             this.scs = scs;
         }
-        public abstract void Execute();
+        public abstract void Execute(FoldersAndFiles.FoldersAndFiles file);
     }
 }

@@ -13,9 +13,9 @@ namespace SCS.Commands
         {
 
         }
-        public override void Execute()
+        public override void Execute(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
         {
-            throw new NotImplementedException();
+            scs.Merge(foldersAndFiles);
         }
     }
 }

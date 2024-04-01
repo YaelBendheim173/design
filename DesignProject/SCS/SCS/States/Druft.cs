@@ -8,28 +8,31 @@ namespace SCS.States
 {
     internal class Druft : State
     {
-        public Druft(FoldersAndFiles.FoldersAndFiles f) : base(f)
+        Queue<State> history=new Queue<State>();
+        public Druft(FoldersAndFiles.FoldersAndFiles f) : base(sourceFile,history)
         {
-
+            
         }
-        public override void Add()
+        public override string Add(FoldersAndFiles.FoldersAndFiles file)
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Commit()
-        {
-            throw new NotImplementedException();
+            file.ChangeState(new Staged(sourceFile));
+            return "The file was added successfully";
         }
 
-        public override void Merge()
+        public override string Commit()
         {
-            throw new NotImplementedException();
+            return "The file already commited";
         }
 
-        public override void RequestReview()
+        public override string Merge()
         {
-            throw new NotImplementedException();
+            return "The file have to request a review";
+        }
+
+        public override string RequestReview()
+        {
+            sourceFile.ChangeState(new UnderReview(sourceFile));
+            return "The file is under review";
         }
     }
 }

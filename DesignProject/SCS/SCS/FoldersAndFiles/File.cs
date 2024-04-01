@@ -8,13 +8,17 @@ namespace SCS.FoldersAndFiles
 {
     internal class File:FoldersAndFiles
     {
-        public override void Open()
-        {
 
+        public override List<FoldersAndFiles> Open()
+        {
+            List<FoldersAndFiles> lst =new List<FoldersAndFiles>();
+            lst.Add(this);
+            return lst;
         }
         public void Update()
         {
 
         }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SCS.FoldersAndFiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,29 +23,42 @@ namespace SCS.SCS
             }
             return system;
         }
-        public void Merge()
+        public string Merge(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
         {
-
+            foldersAndFiles.State.Merge();
+            return "The merge was successfully executed";
         }
-        public void UndoTheCommit() 
-        { 
-
-        }
-        public void RequestTheReview()
+        public string MergeBranch(Branch branch)
         {
-
+            return "The merge was successfully executed";
         }
-        public void DeleteBranch() 
-        { 
-
-        }
-        public void Commit()
+        public string UndoTheCommit(FoldersAndFiles.FoldersAndFiles foldersAndFiles) 
         {
+            foldersAndFiles.State.history.Dequeue();
+            States.State state = foldersAndFiles.State.history.Dequeue();
+            foldersAndFiles.State.history.Enqueue(state);
+            return "The file has returned to its previous state";
+        }
+        public string RequestTheReview(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
+        {
+            foldersAndFiles.State.RequestReview();
+            return "the file sent to review";
 
         }
-        public void CreateBranch()
+        public string DeleteBranch(Branch branch) 
         {
-
+            return "The branch deleted successfully";
+        }
+        public string Commit(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
+        {
+            foldersAndFiles.State.Commit();
+            return "The commit was successfuly executed";
+        }
+        public Branch CreateBranch(Branch branch)
+        {
+            Branch newBranch = new Branch();
+            newBranch = branch;
+            return newBranch;
         }
     }
 }

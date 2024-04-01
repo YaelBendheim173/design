@@ -12,24 +12,25 @@ namespace SCS.States
         {
 
         }
-        public override void Add()
+        public override string Add()
         {
-            throw new NotImplementedException();
+            return "The file already added";
         }
 
-        public override void Commit()
+        public override string Commit()
         {
-            throw new NotImplementedException();
+            return "The file already commited";
         }
 
-        public override void Merge()
+        public override string Merge()
         {
-            throw new NotImplementedException();
+            return "The file have to request a review";
         }
 
-        public override void RequestReview()
+        public override string RequestReview()
         {
-            throw new NotImplementedException();
+            sourceFile.ChangeState(new UnderReview(sourceFile));
+            return "The file is under review";
         }
     }
 }

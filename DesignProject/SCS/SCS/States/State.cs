@@ -8,10 +8,14 @@ namespace SCS.States
 {
     internal abstract class State
     {
+        public Queue<State> history;
         protected FoldersAndFiles.FoldersAndFiles sourceFile;
-        public State(FoldersAndFiles.FoldersAndFiles f)
+        public State(FoldersAndFiles.FoldersAndFiles sourceFile, Queue<State> history)
         {
-            sourceFile = f;
+            sourceFile = sourceFile;
+            this.history = history;
+            this.history.Enqueue(this);
+
         }
         public abstract string Add();
         public abstract string Commit();

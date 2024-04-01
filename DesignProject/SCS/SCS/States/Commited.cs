@@ -8,7 +8,7 @@ namespace SCS.States
 {
     internal class Commited : State
     {
-        public Commited(FoldersAndFiles.FoldersAndFiles f):base(f)
+        public Commited(FoldersAndFiles.FoldersAndFiles f):base(sourceFile,history)
         {
             
         }

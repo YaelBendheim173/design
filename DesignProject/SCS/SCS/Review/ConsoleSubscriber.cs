@@ -14,7 +14,7 @@ namespace SCS.Review
         }
         public void PrintToConsole(FoldersAndFiles.FoldersAndFiles f)
         {
-
+            Console.WriteLine("we got request to review");
         }
     }
 }
