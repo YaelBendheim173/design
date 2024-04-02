@@ -9,13 +9,13 @@ namespace SCS.Commands
 {
     internal class UndoTheCommit : Command
     {
-        public UndoTheCommit(SCSReciever scs) : base(scs)
+        public UndoTheCommit(FoldersAndFiles.FoldersAndFiles file) : base(file)
         {
 
         }
-        public override void Execute(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
+        public override void Execute()
         {
-            scs.UndoTheCommit(foldersAndFiles); 
+            scs.UndoTheCommit(file); 
         }
     }
 }

@@ -10,10 +10,12 @@ namespace SCS.Commands
     internal abstract class Command
     {
         protected SCSReciever scs;
-        public Command(SCSReciever scs)
+        public FoldersAndFiles.FoldersAndFiles file;
+        public Command(FoldersAndFiles.FoldersAndFiles file)
         {
-            this.scs = scs;
+            this.file = file;
+            scs=SCSReciever.GetSystem();
         }
-        public abstract void Execute(FoldersAndFiles.FoldersAndFiles file);
+        public abstract void Execute();
     }
 }

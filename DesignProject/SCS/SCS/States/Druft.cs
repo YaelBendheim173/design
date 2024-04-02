@@ -8,14 +8,13 @@ namespace SCS.States
 {
     internal class Druft : State
     {
-        Queue<State> history=new Queue<State>();
-        public Druft(FoldersAndFiles.FoldersAndFiles f) : base(sourceFile,history)
+        public Druft(FoldersAndFiles.FoldersAndFiles f, Queue<State> history) : base(f, history)
         {
             
         }
-        public override string Add(FoldersAndFiles.FoldersAndFiles file)
+        public override string Add()
         {
-            file.ChangeState(new Staged(sourceFile));
+            sourceFile.ChangeState(new Staged(sourceFile, history));
             return "The file was added successfully";
         }
 
@@ -31,7 +30,7 @@ namespace SCS.States
 
         public override string RequestReview()
         {
-            sourceFile.ChangeState(new UnderReview(sourceFile));
+            sourceFile.ChangeState(new UnderReview(sourceFile, history));
             return "The file is under review";
         }
     }

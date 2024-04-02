@@ -23,9 +23,13 @@ namespace SCS.SCS
         {
             return files;
         }
-        public override Branch Clone()
+        public Branch Clone(Branch branch)
         {
-
+            foreach (var f in branch.files)
+            {
+                this.files.Add(f);
+            }
+            return this;
         }
     }
 }

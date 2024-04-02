@@ -8,7 +8,7 @@ namespace SCS.States
 {
     internal class UnderReview: State
     {
-        public UnderReview(FoldersAndFiles.FoldersAndFiles f) : base(f)
+        public UnderReview(FoldersAndFiles.FoldersAndFiles f, Queue<State> history) : base(f, history)
         {
 
         }
@@ -24,13 +24,13 @@ namespace SCS.States
 
         public override string Merge()
         {
-            sourceFile.ChangeState(new Merged(sourceFile));
+            sourceFile.ChangeState(new Merged(sourceFile, history));
             return "The file have to request a review";
         }
 
         public override string RequestReview()
         {
-            sourceFile.ChangeState(new UnderReview(sourceFile));
+            sourceFile.ChangeState(new UnderReview(sourceFile,history));
             return "The file is under review";
         }
     }

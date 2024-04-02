@@ -9,13 +9,14 @@ namespace SCS.Commands
 {
     internal class Merge: Command
     {
-        public Merge(SCSReciever scs) : base(scs)
+        public Merge(FoldersAndFiles.FoldersAndFiles file) : base(file)
         {
 
         }
-        public override void Execute(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
+        
+        public override void Execute()
         {
-            scs.Merge(foldersAndFiles);
+            scs.Merge(file);
         }
     }
 }

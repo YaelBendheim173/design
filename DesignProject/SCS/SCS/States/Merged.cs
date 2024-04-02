@@ -8,7 +8,7 @@ namespace SCS.States
 {
     internal class Merged : State
     {
-        public Merged(FoldersAndFiles.FoldersAndFiles f) : base(f)
+        public Merged(FoldersAndFiles.FoldersAndFiles f, Queue<State> history) : base(f,history)
         {
 
         }
@@ -29,7 +29,7 @@ namespace SCS.States
 
         public override string RequestReview()
         {
-            sourceFile.ChangeState(new UnderReview(sourceFile));
+            sourceFile.ChangeState(new UnderReview(sourceFile, history));
             return "The file is under review";
         }
     }

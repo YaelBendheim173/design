@@ -8,7 +8,7 @@ namespace SCS.States
 {
     internal class ReadyToMerge : State
     {
-        public ReadyToMerge(FoldersAndFiles.FoldersAndFiles f) : base(f)
+        public ReadyToMerge(FoldersAndFiles.FoldersAndFiles f, Queue<State> history) : base(f, history)
         {
 
         }
@@ -24,7 +24,7 @@ namespace SCS.States
 
         public override string Merge()
         {
-            sourceFile.ChangeState(new Merged(sourceFile));
+            sourceFile.ChangeState(new Merged(sourceFile, history));
             return "The file was merged";
         }
 

@@ -9,13 +9,14 @@ namespace SCS.Commands
 {
     internal class RequestTheReview : Command
     {
-        public RequestTheReview(SCSReciever scs) : base(scs)
+        public RequestTheReview(FoldersAndFiles.FoldersAndFiles file) : base(file)
         {
-
+            scs.NotifySubscribers(file);
         }
-        public override void Execute(FoldersAndFiles.FoldersAndFiles foldersAndFiles)
+        
+        public override void Execute()
         {
-            scs.RequestTheReview(foldersAndFiles);
+            scs.RequestTheReview(file);
         }
     }
 }

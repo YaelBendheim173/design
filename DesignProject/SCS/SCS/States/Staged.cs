@@ -8,7 +8,7 @@ namespace SCS.States
 {
     internal class Staged: State
     {
-        public Staged(FoldersAndFiles.FoldersAndFiles f) : base(f)
+        public Staged(FoldersAndFiles.FoldersAndFiles f, Queue<State> history) : base(f, history)
         {
 
         }
@@ -19,7 +19,7 @@ namespace SCS.States
 
         public override string Commit()
         {
-            sourceFile.ChangeState(new Commited(sourceFile));
+            sourceFile.ChangeState(new Commited(sourceFile, history));
             return "The file already commited";
         }
 
@@ -30,7 +30,7 @@ namespace SCS.States
 
         public override string RequestReview()
         {
-            sourceFile.ChangeState(new UnderReview(sourceFile));
+            sourceFile.ChangeState(new UnderReview(sourceFile,history));
             return "The file is under review";
         }
     }

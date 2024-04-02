@@ -3,3 +3,13 @@ H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.GeneratedMSB
 H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.AssemblyInfoInputs.cache
 H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.AssemblyInfo.cs
 H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.csproj.CoreCompileInputs.cache
+H:\DesignPatterns\design\DesignProject\SCS\SCS\bin\Debug\net7.0\SCS.exe
+H:\DesignPatterns\design\DesignProject\SCS\SCS\bin\Debug\net7.0\SCS.deps.json
+H:\DesignPatterns\design\DesignProject\SCS\SCS\bin\Debug\net7.0\SCS.runtimeconfig.json
+H:\DesignPatterns\design\DesignProject\SCS\SCS\bin\Debug\net7.0\SCS.dll
+H:\DesignPatterns\design\DesignProject\SCS\SCS\bin\Debug\net7.0\SCS.pdb
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.dll
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\refint\SCS.dll
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.pdb
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\SCS.genruntimeconfig.cache
+H:\DesignPatterns\design\DesignProject\SCS\SCS\obj\Debug\net7.0\ref\SCS.dll

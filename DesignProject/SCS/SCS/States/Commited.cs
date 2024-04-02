@@ -8,7 +8,7 @@ namespace SCS.States
 {
     internal class Commited : State
     {
-        public Commited(FoldersAndFiles.FoldersAndFiles f):base(sourceFile,history)
+        public Commited(FoldersAndFiles.FoldersAndFiles f, Queue<State> history) :base(f,history)
         {
             
         }
@@ -29,7 +29,7 @@ namespace SCS.States
 
         public override string RequestReview()
         {
-            sourceFile.ChangeState(new UnderReview(sourceFile));
+            sourceFile.ChangeState(new UnderReview(sourceFile, history));
             return "The file is under review";
         }
     }

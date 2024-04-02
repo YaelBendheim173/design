@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SCS.FoldersAndFiles
 {
-    internal class File:FoldersAndFiles
+    internal class Files:FoldersAndFiles
     {
 
         public override List<FoldersAndFiles> Open()

@@ -12,8 +12,8 @@ namespace SCS.States
         protected FoldersAndFiles.FoldersAndFiles sourceFile;
         public State(FoldersAndFiles.FoldersAndFiles sourceFile, Queue<State> history)
         {
-            sourceFile = sourceFile;
-            this.history = history;
+            this.sourceFile = sourceFile;
+            this.history=history;
             this.history.Enqueue(this);
 
         }
